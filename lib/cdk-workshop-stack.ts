@@ -8,7 +8,7 @@ export class CdkWorkshopStack extends Stack {
     super(scope, id, props);
     /** defines as Lambda resource */
     const hello = new lambda.Function(this, 'HelloHandler', {
-      runtime: lambda.Runtime.NODEJS_18_X,
+      runtime: lambda.Runtime.NODEJS_14_X,
       code: lambda.Code.fromAsset('lambda'),
       handler: 'hello.handler',
     });
